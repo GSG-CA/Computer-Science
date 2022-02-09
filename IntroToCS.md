@@ -154,9 +154,9 @@ E.g. Folders on your hard drive
 
 - ### Queues & Stacks
 
-      Queues used to store elements in a way that first stored element stored will be retrieved first, but Stacks retrieve last element first.
+  Queues used to store elements in a way that first stored element stored will be retrieved first, but Stacks retrieve last element first.
 
-      **Practical Example**
+  **Practical Example**
 
   Queues: Adding orderes for printer.
   Stacks: Implementing browser back function.
