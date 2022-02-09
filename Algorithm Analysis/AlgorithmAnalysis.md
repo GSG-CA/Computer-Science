@@ -82,25 +82,25 @@ Keeping those rules in mind, the following are equivalent:
 
 The following functions are **O(1)** or **constant time** because the algorithm is not dependent on a variable size data set. In other words, regardless of the input size, the runtime of the algorithm will not grow beyond some constant size. (In many cases, it will be roughly the same regardless of the input).
 
-```javascript=
+```javascript
 function add(num1, num2, num3) {
-   return num1 + num2 + num3;
+  return num1 + num2 + num3;
 }
 ```
 
-```javascript=
+```javascript
 function sayHello() {
-    for (let i = 0; i < 100; i++) {
-       console.log("Hello");
-    }
+  for (let i = 0; i < 100; i++) {
+    console.log("Hello");
+  }
 }
 ```
 
-```javascript=
+```javascript
 function logMultiples(num) {
-    for (let i = 0; i < 10; i++) {
-        console.log(i * num);
-    }
+  for (let i = 0; i < 10; i++) {
+    console.log(i * num);
+  }
 }
 ```
 
@@ -110,23 +110,23 @@ function logMultiples(num) {
 
 The following algorithms are **O(n)**, or **linear time**, because the data set is iterated over approximately one time:
 
-```javascript=
+```javascript
 function sayHello(numberOfTimes) {
-    for (let i = 0; i < numberOfTimes; i++) {
-        console.log("Hello");
-    }
+  for (let i = 0; i < numberOfTimes; i++) {
+    console.log("Hello");
+  }
 }
 ```
 
-```javascript=
+```javascript
 function doubleThenTriple(numbers) {
-    let doubled = numbers.map(function(num) {
-        return num * 2;
-    });
+  let doubled = numbers.map(function (num) {
+    return num * 2;
+  });
 
-    return doubled.map(function(num) {
-        return num * 3;
-    });
+  return doubled.map(function (num) {
+    return num * 3;
+  });
 }
 ```
 
@@ -134,38 +134,33 @@ function doubleThenTriple(numbers) {
 
 #### O(n<sup>2</sup>)
 
-```javascript=
+```javascript
 function allPairs(arr) {
-    let pairs = [];
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = i + 1; j < arr.length; j++) {
-            pairs.push([arr[i], arr[j]]);
-        }
-    }
-
-    return pairs;
-}
-```
-
-```javascript=
-function bubbleSort(arr){
-
-  let len = arr.length;
-
-  for(let i =0; i < len; i++){
-
-    for(let j = 0; j < len; j++){
-
-        if(arr[j] > arr[j + 1]){
-          // swap
-          let temp = arr[j];
-          arr[j] = arr[j+1];
-          arr[j+1] = temp;
-
-        }
+  let pairs = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      pairs.push([arr[i], arr[j]]);
     }
   }
 
+  return pairs;
+}
+```
+
+```javascript
+function bubbleSort(arr) {
+  let len = arr.length;
+
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len; j++) {
+      if (arr[j] > arr[j + 1]) {
+        // swap
+        let temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+      }
+    }
+  }
 }
 ```
 
@@ -173,7 +168,7 @@ In these two examples, within each element of the array, we are iterating over a
 
 It's a helpful rule of thumb that in general, if you see nested loops, the runtime will be O(nlevels of nesting). In other words, a function with a single for loop will be O(n), a function with a loop inside of a loop will be O(n2), a function with a loop inside of a loop inside of a loop will be O(n3), and so on. However, **this rule of thumb doesn't always hold**, as the following examples show:
 
-```javascript=
+```javascript
 // o(n^2)
 function logMultiples(n) {
     for (var num1 = 1; num1 <= n; num1++) {
