@@ -171,8 +171,8 @@ It's a helpful rule of thumb that in general, if you see nested loops, the runti
 ```javascript
 // o(n^2)
 function logMultiples(n) {
-    for (var num1 = 1; num1 <= n; num1++) {
-        for (var num2 = 1; num2 <= n; num2++) {
+    for (let num1 = 1; num1 <= n; num1++) {
+        for (let num2 = 1; num2 <= n; num2++) {
             console.log(num1 * num2);
         }
     }
@@ -180,8 +180,8 @@ function logMultiples(n) {
 
 // O(n)
 function logSomeMultiples(n) {
-    for (var num1 = 1; num1 < n=; num1++) {
-        for (var num2 = 1; num2 <= Math.min(n, 10); num2++) {
+    for (let num1 = 1; num1 < n=; num1++) {
+        for (let num2 = 1; num2 <= Math.min(n, 10); num2++) {
             console.log(num1 * num2);
         }
     }
