@@ -188,8 +188,50 @@ function logSomeMultiples(n) {
 }
 ```
 
+---
+
+## Across Time and Space
+
+So far we've only been talking about the runtime of different algorithms using Big O Notation. This is often referred to as analyzing the **time complexity** of the algorithm.
+
+But Big O isn't just used to talk about the time it takes our programs to run; it's also used to talk about how much space (i.e. memory) our program requires. This is often referred to as analyzing the **space complexity** of the algorithm.
+
+Very often we're concerned primarily with **auxiliary space complexity**, that is, how much additional memory does the algorithm require beyond what needs to be allocated for the inputs themselves?
+
+Let's look at a couple of examples:
+
+```js
+function total(array) {
+  var total = 0;
+  for (var i = 0; i < array.length; i++) {
+    total += array[i];
+  }
+  return total;
+}
+```
+
+In this example, `total` takes one input, which is an array. Let's let `n` denote the length of the array. Note that the time complexity of `total` is O(n), since we're looping through the array once and adding to the total. However, the space complexity is just O(1), since we only require one additional unit of space, for the number stored in `total`.
+
+Here's another example:
+
+```js
+function double(array) {
+  var newArray = [];
+  for (var i = 0; i < array.length; i++) {
+    newArray.push(2 * array[i]);
+  }
+  return newArray;
+}
+```
+
+Here, our function `double` takes each element of the input array, doubles it, and returns a new array of doubled values. In this case, both the time and space complexities are O(n). Space complexity is larger in this case because we need n additional units of space: one for each element in the original array.
+
+---
+
 ![](https://i.imgur.com/wjXHq1j.png)
 
 ![](https://i.imgur.com/F0fIuCx.png)
+
+---
 
 ## Big O [Exercises](./BigOExercises.md)
