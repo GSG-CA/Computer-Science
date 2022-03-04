@@ -7,3 +7,5 @@ A small curriculum to teach GSG CA Students the basics of Computer Science
 2- [Algorithm Analysis](./Algorithm-Analysis//AlgorithmAnalysis.md)
 
 3- [Arrays](https://github.com/GSG-CA/Arrays-Workshop)
+
+4- [LinkedLists](https://github.com/GSG-CA/LinkedLists-Workshop)
