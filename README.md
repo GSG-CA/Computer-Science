@@ -11,3 +11,5 @@ A small curriculum to teach GSG CA Students the basics of Computer Science
 - [LinkedLists](https://github.com/GSG-CA/LinkedLists-Workshop)
 
 - [Two Pointers Tech and Searching Algorithms](https://github.com/GSG-CA/two-pointers-and-searching)
+
+- [Stacks & Queues](./StacksAndQueues.md)
