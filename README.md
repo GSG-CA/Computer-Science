@@ -16,5 +16,6 @@ A small curriculum to teach GSG CA Students the basics of Computer Science
 
 - [Sorting Algorithms](https://hackmd.io/_mO408QKTwqvkyVBmj21Ng)
 
-- [Maps & HashTables](https://hackmd.io/ZoZ-E34XTUy73BDsu60-1w#/
-)
+- [Maps & HashTables](https://hackmd.io/ZoZ-E34XTUy73BDsu60-1w#/)
+
+- [Binary Search Tree](https://hackmd.io/t_W8GcQjRNewiV7Bp0eJUA#/)
