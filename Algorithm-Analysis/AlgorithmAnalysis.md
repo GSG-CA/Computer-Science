@@ -2,8 +2,6 @@
 
 In **computer science**, an algorithm is a step-by-step procedure for solving a problem in a finite amount of time.
 
-![](https://i.imgur.com/S21nyLo.png)
-
 A **data structure** is a systematic way of organizing and accessing data
 
 These concepts are central to computing, but to be able to classify some data structures and algorithms as “good,” we must have precise ways of analyzing them.
