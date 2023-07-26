@@ -14,6 +14,8 @@ A small curriculum to teach GSG CA Students the basics of Computer Science
 
 - [Stacks & Queues](./StacksAndQueues.md)
 
+- [Recursion](./Recursion.md)
+
 - [Sorting Algorithms](https://hackmd.io/_mO408QKTwqvkyVBmj21Ng)
 
 - [Maps & HashTables](https://hackmd.io/ZoZ-E34XTUy73BDsu60-1w#/)
