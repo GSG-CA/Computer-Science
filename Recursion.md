@@ -23,7 +23,7 @@ function B() {
 ```
 if we call A(), it will call B() and then B() will call A() again and so on.
 the function calls itself indirectly through another function until it reaches the base case
-(terminating condition / stopping condition) but becuase there is no base case in the above example, the function will cause a stack overflow error.
+(terminating condition / stopping condition) but because there is no base case in the above example, the function will cause a stack overflow error.
 
 
 ## What is the base case?
@@ -162,6 +162,12 @@ The benefit of tailed recursion is that it can be easily converted to an iterati
 basically, the compiler can convert the tailed recursive function to an iterative loop to save memory.
 in that way we can use recursion and benefit from its advantages and at the same time we can save memory.
 
+## tail call optimization
+Tail call optimization is a technique used by compilers to convert certain types of recursive function calls into iterative loops, so that they use less space on the call stack.
+
+>**UNFORTUNATELY, tail call optimization is not fully supported in JavaScript.** 
+>Only some js engines support it.
+
 backing to the factorial example:
 ```js=
 function factorial(n, result = 1) {
@@ -182,6 +188,72 @@ function factorial(n) {
 }
 ```
 So Now the Space Complexity of the factorial function is O(1) instead of O(n).
+
+in C++:
+```cpp=
+int factorial(int n, int result = 1) {
+  if (n == 0) {
+    return result;
+  }
+  return factorial(n - 1, n * result);
+}
+```
+the compiler can convert the above function to the following :
+```cpp=
+int factorial(int n) {
+  int result = 1;
+  loop:
+  if (n == 0) {
+    return result;
+  }
+  result *= n;
+  n--;
+  goto loop;
+}
+```
+its not necessary to use goto, we can use a while loop instead.
+goto is used here just to show that the compiler can convert the tailed recursive function to an iterative loop and reset the variables.
+
+## Exercises
+
+### 1. Write a recursive function to calculate the nth Fibonacci number.
+```js=
+function fibonacci(n) {
+  // your code here
+}
+```
+<details>
+<summary>Solution</summary>
+
+```js=
+function fibonacci(n) {
+  if (n === 0 || n === 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+</details>
+
+### 2. Covert the previous function to a tailed recursive function.
+```js=
+function fibonacci(n, a = 0, b = 1) {
+  // your code here
+}
+```
+<details>
+<summary>Solution</summary>
+
+```js=
+function fibonacci(n, a = 0, b = 1) {
+  if (n === 0) {
+    return a;
+  }
+  return fibonacci(n - 1, b, a + b);
+}
+```
+</details>
+
 
 
 
