@@ -255,6 +255,8 @@ function fibonacci(n, a = 0, b = 1) {
 </details>
 
 
+to learn more about recursion you can see [this video](https://www.youtube.com/watch?v=k7-N8R0-KY4&t=746s)
+or [this article](https://www.geeksforgeeks.org/recursion/)
 
 
 

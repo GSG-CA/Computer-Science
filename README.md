@@ -10,11 +10,11 @@ A small curriculum to teach GSG CA Students the basics of Computer Science
 
 - [LinkedLists](https://github.com/GSG-CA/LinkedLists-Workshop)
 
+- [Recursion](./Recursion.md)
+
 - [Two Pointers Tech and Searching Algorithms](https://github.com/GSG-CA/two-pointers-and-searching)
 
 - [Stacks & Queues](./StacksAndQueues.md)
-
-- [Recursion](./Recursion.md)
 
 - [Sorting Algorithms](https://hackmd.io/_mO408QKTwqvkyVBmj21Ng)
 
